@@ -1,0 +1,23 @@
+{
+  "name": "world-soccer-scouting-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcampo5/World-Soccer-Scouting-DB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexcampo5/World-Soccer-Scouting-DB/issues"
+  },
+  "homepage": "https://github.com/alexcampo5/World-Soccer-Scouting-DB#readme",
+  "dependencies": {
+    "mongoose": "^6.4.6"
+  }
+}
