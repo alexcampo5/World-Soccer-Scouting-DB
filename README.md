@@ -38,3 +38,5 @@ Post MVP:
 ---
 
 ### **_Credits_**
+
+- All player data and photos pulled from [Link](fbref.com)

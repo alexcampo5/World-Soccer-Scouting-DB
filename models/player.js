@@ -9,6 +9,7 @@ const Player = new Schema(
     nationality: { type: String, required: true },
     height: { type: String, required: true },
     skills: { type: Array, required: true },
+    club: { type: String, required: true },
     league: [{ type: Schema.Types.ObjectId, ref: 'league' }]
   },
   { timestamps: true }
