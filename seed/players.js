@@ -20,7 +20,7 @@ const main = async () => {
       height: `5'9"`,
       skills: ['pace', 'finishing', 'dribbling'],
       club: 'Liverpool',
-      league: prem[0]._id
+      league: prem._id
     },
     {
       playerName: 'Jordan Henderson',
@@ -31,7 +31,7 @@ const main = async () => {
       height: `5'11"`,
       skills: ['passing', 'stamina', 'leadership'],
       club: 'Liverpool',
-      league: prem[0]._id
+      league: prem._id
     },
     {
       playerName: `Kylian Mbappé`,
@@ -42,7 +42,40 @@ const main = async () => {
       height: `5'10"`,
       skills: ['speed', 'finishing', 'dribbling'],
       club: 'PSG',
-      league: ligue1[0]._id
+      league: ligue1._id
+    },
+    {
+      playerName: `Federico Chiesa`,
+      image:
+        'https://fbref.com/req/20220707/images/headshots/b0f7e36c_2018.jpg',
+      age: '24',
+      nationality: 'Italy',
+      height: `5'8"`,
+      skills: ['speed', 'finishing', 'dribbling'],
+      club: 'Juventus',
+      league: serieA._id
+    },
+    {
+      playerName: `Karim Benzema`,
+      image:
+        'https://fbref.com/req/20220707/images/headshots/70d74ece_2018.jpg',
+      age: '34',
+      nationality: 'France',
+      height: `6'0"`,
+      skills: ['composure', 'finishing', 'dribbling'],
+      club: 'Real Madrid',
+      league: laLiga._id
+    },
+    {
+      playerName: `Thomas Muller`,
+      image:
+        'https://fbref.com/req/20220707/images/headshots/3c6089ab_2018.jpg',
+      age: '32',
+      nationality: 'Germany',
+      height: `6'1"`,
+      skills: ['positioning', 'finishing', 'passing'],
+      club: 'Bayern Munich',
+      league: bundes._id
     }
   ]
 

@@ -39,4 +39,4 @@ Post MVP:
 
 ### **_Credits_**
 
-- All player data and photos pulled from [Link](fbref.com)
+- All player data and photos pulled from [Fbref](https://fbref.com/en/)

@@ -31,8 +31,22 @@ const getPlayerById = async (req, res) => {
   }
 }
 
+const getLeagueById = async (req, res) => {
+  try {
+    let { id } = req.params
+    let league = await League.findById(id)
+    if (!league) {
+      return res.status(404).send('This league does not exist')
+    }
+    return res.status(200).json({ league })
+  } catch (error) {
+    return res.send(500).sendStatus(error.message)
+  }
+}
+
 module.exports = {
   getAllLeagues,
   getAllPlayers,
-  getPlayerById
+  getPlayerById,
+  getLeagueById
 }
