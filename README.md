@@ -40,3 +40,4 @@ Post MVP:
 ### **_Credits_**
 
 - All player data and photos pulled from [Fbref](https://fbref.com/en/)
+- Background photo pulled from google images [Link](https://attackingsoccer.com/wp-content/uploads/2021/02/What-is-a-Pitch-in-Soccer-e1613034939967.jpg)

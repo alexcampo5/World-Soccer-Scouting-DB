@@ -6,7 +6,7 @@ export default function Header () {
       <nav>
         <Link to='/'>Home</Link>
         <Link to='/players'>All Players</Link>
-        <Link to=''>Add Player</Link>
+        <Link to='/newplayer'>Add Player</Link>
       </nav>
     </header>
   )

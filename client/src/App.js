@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import AllPlayers from './pages/AllPlayers'
+import NewPlayer from './pages/NewPlayer'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/players" element={<AllPlayers />} />
+          <Route path="/newplayer" element={<NewPlayer />} />
+          {/* <Route path="/" element /> */}
         </Routes>
       </main>
     </div>

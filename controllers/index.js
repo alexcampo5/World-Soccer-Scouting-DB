@@ -67,11 +67,49 @@ const deletePlayer = async (req, res) => {
   }
 }
 
+const updatePlayer = async (req, res) => {
+  try {
+    const id = req.params
+    await Player.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true },
+      (err, player) => {
+        if (err) {
+          res.status(500).send(err)
+        }
+        if (!player) {
+          res.status(500).send('Player not found!')
+        }
+        return res.status(200).json(player)
+      }
+    )
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+
+  //Other way to do this:
+  //   try{
+  //     const id = req.params
+  //     //creating a new object that is being updated via the body of the request
+  //     const updatedObject = await Player.update(req.body, {
+  //       //targeting the specific objects by its id
+  //       where: {id: id},
+  //       //sends back updated version
+  //       returning: true
+  //     })
+  //     res.send(updatedObject)
+  //   }catch (error){
+  //     throw error
+  //   }
+}
+
 module.exports = {
   getAllLeagues,
   getAllPlayers,
   getPlayerById,
   getLeagueById,
   addPlayer,
-  deletePlayer
+  deletePlayer,
+  updatePlayer
 }

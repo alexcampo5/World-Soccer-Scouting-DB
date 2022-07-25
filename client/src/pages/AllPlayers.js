@@ -16,6 +16,8 @@ export default function AllPlayers() {
 
   return (
     <div>
+      <h1> All Players</h1>
+      <br></br>
       <section>
         {allPlayers.map((currentPlayer) => (
           <div key={currentPlayer._id}>

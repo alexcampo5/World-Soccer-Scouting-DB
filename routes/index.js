@@ -8,7 +8,8 @@ router.get('/leagues', controllers.getAllLeagues)
 router.get('/players', controllers.getAllPlayers)
 router.get('/players/:id', controllers.getPlayerById)
 router.get('/leagues/:id', controllers.getLeagueById)
-router.put('/players/:id', controllers.addPlayer)
+router.post('/players/:id', controllers.addPlayer)
 router.delete('/players/:id', controllers.deletePlayer)
+router.put('/players/:id', controllers.updatePlayer)
 
 module.exports = router
