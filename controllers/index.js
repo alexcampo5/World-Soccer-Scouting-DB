@@ -21,7 +21,7 @@ const getAllPlayers = async (req, res) => {
 const getPlayerById = async (req, res) => {
   try {
     let { id } = req.params
-    let player = Player.findById(id)
+    let player = await Player.findById(id)
     if (!player) {
       return res.status(404).send('This player does not exist')
     }
@@ -44,9 +44,34 @@ const getLeagueById = async (req, res) => {
   }
 }
 
+const addPlayer = async (req, res) => {
+  try {
+    const player = await new Player(req.body)
+    await Player.save()
+    return res.status(201).json({ player })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const deletePlayer = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Player.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Plant Deleted')
+    }
+    throw new Error('Player not found.')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getAllLeagues,
   getAllPlayers,
   getPlayerById,
-  getLeagueById
+  getLeagueById,
+  addPlayer,
+  deletePlayer
 }
