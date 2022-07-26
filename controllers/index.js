@@ -47,7 +47,7 @@ const getLeagueById = async (req, res) => {
 const addPlayer = async (req, res) => {
   try {
     const player = await new Player(req.body)
-    await Player.save()
+    await player.save()
     return res.status(201).json({ player })
   } catch (error) {
     return res.status(500).json({ error: error.message })

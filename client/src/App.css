@@ -8,7 +8,8 @@ nav{
 
 .App {
   text-align: center;
-  background-image: url('https://attackingsoccer.com/wp-content/uploads/2021/02/What-is-a-Pitch-in-Soccer-e1613034939967.jpg')
+  background-image: url('https://attackingsoccer.com/wp-content/uploads/2021/02/What-is-a-Pitch-in-Soccer-e1613034939967.jpg');
+  background-size: cover;
 }
 
 .homepage{
