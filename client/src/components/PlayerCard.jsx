@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 export default function PlayerCard (props) {
   const [playerDetails, setPlayerDetails] = useState(null)
   let {id} = useParams()
 
-  // useEffect(() => {
-  //   let selectedPlayer = props.players.find((currentPlayer) => currentPlayer._id === (id))
-  // })
+  const handleDetailsClick = (player) => {
+    navigate(`${player._id}`)
+  }
 
   const getPlayerDetails = async () => {
     let res = await axios.get(`http://localhost:3001/players/${id}`)
@@ -42,6 +43,7 @@ export default function PlayerCard (props) {
       </div>
       <div>
         <button onClick={deletePlayer}>Delete player</button>
+        <button>Edit player</button>
       </div>
     </div>
   ) : <h1>Player does not exist</h1>;

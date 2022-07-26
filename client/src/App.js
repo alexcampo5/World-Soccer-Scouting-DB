@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import PlayerCard from './components/PlayerCard'
+import EditPlayer from './components/EditPlayer'
 
 function App() {
   const [allPlayers, setAllPlayers] = useState([])
@@ -75,6 +76,7 @@ function App() {
               <NewPlayer handleChange={handleChange} onSubmit={addNewPlayer} />
             }
           />
+          <Route path="/edit/:id" element={<EditPlayer />} />
         </Routes>
       </main>
     </div>
