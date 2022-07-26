@@ -6,8 +6,11 @@ import AllPlayers from './pages/AllPlayers'
 import NewPlayer from './components/NewPlayer'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import PlayerCard from './components/PlayerCard'
 
 function App() {
+  const [allPlayers, setAllPlayers] = useState([])
   const [newPlayer, setNewPlayer] = useState({
     playerName: '',
     image: '',
@@ -18,6 +21,7 @@ function App() {
     club: '',
     league: ''
   })
+  let navigate = useNavigate()
 
   const handleChange = (e) => {
     setNewPlayer({ ...newPlayer, [e.target.name]: e.target.value })
@@ -42,13 +46,29 @@ function App() {
     addNewPlayer()
   }, [])
 
+  const getAllPlayers = async () => {
+    const res = await axios.get('http://localhost:3001/players')
+    setAllPlayers(res.data.allLeagues)
+  }
+
+  useEffect(() => {
+    getAllPlayers()
+  }, [])
+
   return (
     <div className="App">
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/players" element={<AllPlayers />} />
+          <Route
+            path="/players"
+            element={<AllPlayers players={allPlayers} />}
+          />
+          <Route
+            path="/players/:id"
+            element={<PlayerCard players={allPlayers} />}
+          />
           <Route
             path="/newplayer"
             element={
