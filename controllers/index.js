@@ -59,7 +59,7 @@ const deletePlayer = async (req, res) => {
     const { id } = req.params
     const deleted = await Player.findByIdAndDelete(id)
     if (deleted) {
-      return res.status(200).send('Plant Deleted')
+      return res.status(200).send('Player Deleted')
     }
     throw new Error('Player not found.')
   } catch (error) {

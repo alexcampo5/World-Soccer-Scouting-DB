@@ -29,8 +29,8 @@ export default function PlayerCard (props) {
   return playerDetails ? (
     <div>
       <div className='player-content-container'>
-        {/* <image src={playerDetails.image}/> */}
       <h1>{playerDetails.playerName}</h1>
+      <img src={playerDetails.image}/>
       <div>
         <h4>Age: {playerDetails.age}</h4>
         <h4>Nationality: {playerDetails.nationality}</h4>
