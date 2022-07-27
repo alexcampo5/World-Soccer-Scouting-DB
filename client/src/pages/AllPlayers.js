@@ -26,7 +26,7 @@ export default function AllPlayers(props) {
       <br></br>
       <section>
         {allPlayers.map((currentPlayer) => (
-          <div key={currentPlayer._id}>
+          <div key={currentPlayer._id} className="individual-player">
             <img src={currentPlayer.image} />
             <h1>{currentPlayer.playerName}</h1>
             <button onClick={() => handleDetailsClick(currentPlayer)}>

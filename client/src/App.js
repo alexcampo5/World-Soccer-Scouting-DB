@@ -6,7 +6,6 @@ import AllPlayers from './pages/AllPlayers'
 import NewPlayer from './components/NewPlayer'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
 import PlayerCard from './components/PlayerCard'
 import EditPlayer from './components/EditPlayer'
 
@@ -22,9 +21,8 @@ function App() {
     club: '',
     league: ''
   })
-  let navigate = useNavigate()
 
-  const handleChange = (e) => {
+  const handleNewChange = (e) => {
     setNewPlayer({ ...newPlayer, [e.target.name]: e.target.value })
   }
 
@@ -73,7 +71,10 @@ function App() {
           <Route
             path="/newplayer"
             element={
-              <NewPlayer handleChange={handleChange} onSubmit={addNewPlayer} />
+              <NewPlayer
+                handleChange={handleNewChange}
+                onSubmit={addNewPlayer}
+              />
             }
           />
           <Route path="/edit/:id" element={<EditPlayer />} />

@@ -3,7 +3,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 5%
+  padding: 2%
 }
 
 .App {
@@ -15,6 +15,14 @@ nav{
 .homepage{
   height: 700px
 }
+
+.individual-player, .stat-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 
 
 

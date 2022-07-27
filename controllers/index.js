@@ -69,7 +69,7 @@ const deletePlayer = async (req, res) => {
 
 const updatePlayer = async (req, res) => {
   try {
-    const id = req.params
+    const { id } = req.params
     await Player.findByIdAndUpdate(
       id,
       req.body,
@@ -84,8 +84,9 @@ const updatePlayer = async (req, res) => {
         return res.status(200).json(player)
       }
     )
+    console.log('Stat updated')
   } catch (error) {
-    return res.status(500).send(error.message)
+    console.log(error)
   }
 
   //Other way to do this:
