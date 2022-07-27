@@ -12,7 +12,6 @@ export default function Home(props) {
         <Link to="/newplayer">
           <button>Add new player</button>
         </Link>
-        {/* <button>Watchlists</button><Link to='/players'></Link> */}
       </div>
     </div>
   )

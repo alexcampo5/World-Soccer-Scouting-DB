@@ -1,4 +1,4 @@
-//there needs to be a handle change function above wherever this component ends up
+
 import {useNavigate} from 'react-router-dom'
 
 
@@ -88,12 +88,6 @@ export default function NewPlayer (props) {
         <br></br>
         <button>Submit</button>
       </form>
-      <br></br>
-      <br></br>
-      {/* <div>
-        <button onClick={props.returnPage}>Back</button>
-        <button onClick={props.incrementPage} disabled={formComplete}>Next</button>
-      </div> */}
     </div>
   )
 }

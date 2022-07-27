@@ -6,15 +6,6 @@ nav{
   padding: 2%
 }
 
-/* .App {
-  text-align: center;
-  background-image: url('https://attackingsoccer.com/wp-content/uploads/2021/02/What-is-a-Pitch-in-Soccer-e1613034939967.jpg');
-  background-size: cover;
-  background-position: center bottom;
-  height: 100%;
-  max-width: 100%;
-} */
-
 .homepage{
   height: 700px
 }
@@ -62,5 +53,13 @@ h1{
   grid-column: 1;
 }
 
+.search-bar{
+  width: 40%;
+  height: 30px
+}
+
+.search-submit{
+  height: 30px
+}
 
 
