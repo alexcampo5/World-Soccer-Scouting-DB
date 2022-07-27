@@ -43,7 +43,7 @@ function App() {
 
   useEffect(() => {
     addNewPlayer()
-  }, [])
+  })
 
   const getAllPlayers = async () => {
     const res = await axios.get('http://localhost:3001/players')

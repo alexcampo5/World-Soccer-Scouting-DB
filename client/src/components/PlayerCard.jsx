@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
-import {useNavigate} from 'react-router-dom'
 import EditPlayer from "./EditPlayer"
 import editphoto from '../photos/editimage.png'
 
@@ -19,7 +18,7 @@ export default function PlayerCard (props) {
 
   useEffect(() => {
     getPlayerDetails()
-  }, [])
+  })
 
   const deletePlayer = async () => {
     await axios.delete(`http://localhost:3001/players/${id}`)
@@ -49,22 +48,22 @@ export default function PlayerCard (props) {
       <img src={playerDetails.image} alt='Player'/>
       <div className="raw-data-container">
         <div className='stat-container'>
-          <h4 className='stat'>Age: {playerDetails.age}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto}/> <EditPlayer category='age' title='Age' visible={showEditForm} currentValue={props.age}/>
+          <h4 className='stat'>Age: {playerDetails.age}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto} alt='edit'/> <EditPlayer category='age' title='Age' visible={showEditForm} currentValue={props.age}/>
         </div>
         <div className='stat-container' >
-          <h4 className='stat'>Nationality: {playerDetails.nationality}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto}/> <EditPlayer category='nationality' title='Nationality' visible={showEditForm} currentValue={props.nationality}/>
+          <h4 className='stat'>Nationality: {playerDetails.nationality}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto} alt='edit'/> <EditPlayer category='nationality' title='Nationality' visible={showEditForm} currentValue={props.nationality}/>
         </div>
         <div className='stat-container' >
-        <h4 className='stat'>Height: {playerDetails.height}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto}/> <EditPlayer category='height' title='Height' visible={showEditForm} currentValue={props.height}/>
+        <h4 className='stat'>Height: {playerDetails.height}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto} alt='edit'/> <EditPlayer category='height' title='Height' visible={showEditForm} currentValue={props.height}/>
         </div>
         <div className='stat-container' >
-        <h4 className='stat'>League: {leagueDetails.leagueName}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto}/> <EditPlayer category='league' title='League' visible={showEditForm} currentValue={props.league}/>
+        <h4 className='stat'>League: {leagueDetails.leagueName}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto} alt='edit'/> <EditPlayer category='league' title='League' visible={showEditForm} currentValue={props.league}/>
         </div>
         <div className='stat-container' >
-        <h4 className='stat'>Club: {playerDetails.club}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto}/> <EditPlayer category='club' title='Club' visible={showEditForm} currentValue={props.club}/>
+        <h4 className='stat'>Club: {playerDetails.club}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto} alt='edit'/> <EditPlayer category='club' title='Club' visible={showEditForm} currentValue={props.club}/>
         </div>
         <div className='stat-container' >
-        <h4 className='stat'>Skills: {playerDetails.skills}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto}/> <EditPlayer category='skills' title='Skills' visible={showEditForm} currentValue={props.skills}/>
+        <h4 className='stat'>Skills: {playerDetails.skills}</h4> <img onClick={toggleEditForm} className='edit-button' src={editphoto} alt='edit'/> <EditPlayer category='skills' title='Skills' visible={showEditForm} currentValue={props.skills}/>
         </div>
       </div>
       </div>
