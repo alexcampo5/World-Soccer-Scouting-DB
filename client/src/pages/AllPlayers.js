@@ -50,7 +50,7 @@ export default function AllPlayers(props) {
             className="individual-player"
             onClick={() => handleDetailsClick(currentPlayer)}
           >
-            <img src={currentPlayer.image} />
+            <img src={currentPlayer.image} alt="Player headshot" />
             <h2>{currentPlayer.playerName}</h2>
           </div>
         ))}
@@ -68,7 +68,7 @@ export default function AllPlayers(props) {
           className="individual-player"
           onClick={() => handleDetailsClick(searchedPlayer)}
         >
-          <img src={searchedPlayer.image} />
+          <img src={searchedPlayer.image} alt="Player headshot" />
           <h2>{searchedPlayer.playerName}</h2>
         </div>
       </section>

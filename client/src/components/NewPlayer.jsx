@@ -6,7 +6,7 @@ export default function NewPlayer (props) {
   let navigate = useNavigate()
   const handleSubmit = (e) => {
     props.onSubmit(e)
-    //navigate("/players")
+    navigate("/players")
   }
 
   return (
@@ -84,6 +84,7 @@ export default function NewPlayer (props) {
           value={props.skills}
           onChange={props.handleChange}
         />
+        <br></br>
         <br></br>
         <button>Submit</button>
       </form>
