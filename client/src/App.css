@@ -6,21 +6,47 @@ nav{
   padding: 2%
 }
 
-.App {
+/* .App {
   text-align: center;
   background-image: url('https://attackingsoccer.com/wp-content/uploads/2021/02/What-is-a-Pitch-in-Soccer-e1613034939967.jpg');
   background-size: cover;
-}
+  background-position: center bottom;
+  height: 100%;
+  max-width: 100%;
+} */
 
 .homepage{
   height: 700px
 }
 
-.individual-player, .stat-container{
+.individual-player {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background: rgba(252, 236, 196, 0.3);
+  margin: 10px
+}
+
+.individual-player:hover {
+  background: rgba(252, 236, 196, 0.6);
+}
+
+.stat-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1{
+  color: white
+}
+
+.raw-data-container{
+  background-color: rgba(252, 236, 196, 0.3);
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 

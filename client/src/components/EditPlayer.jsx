@@ -31,7 +31,6 @@ export default function EditPlayer (props) {
         />
         <br></br>
         <br></br>
-        
         <button>Submit</button>
       </form>
       <br></br>

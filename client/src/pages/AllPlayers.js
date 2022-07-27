@@ -26,12 +26,13 @@ export default function AllPlayers(props) {
       <br></br>
       <section>
         {allPlayers.map((currentPlayer) => (
-          <div key={currentPlayer._id} className="individual-player">
+          <div
+            key={currentPlayer._id}
+            className="individual-player"
+            onClick={() => handleDetailsClick(currentPlayer)}
+          >
             <img src={currentPlayer.image} />
-            <h1>{currentPlayer.playerName}</h1>
-            <button onClick={() => handleDetailsClick(currentPlayer)}>
-              See more details
-            </button>
+            <h2>{currentPlayer.playerName}</h2>
           </div>
         ))}
       </section>
