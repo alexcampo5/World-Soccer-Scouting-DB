@@ -62,4 +62,14 @@ h1{
   height: 30px
 }
 
+.home-button{
+  background-color: rgba(92, 241, 51, 0.6);
+  color: white;
+  border: none;
+  padding: 20px;
+  margin: 20px;
+}
 
+.home-button:hover{
+  background-color: rgba(92, 241, 51, 1)
+}

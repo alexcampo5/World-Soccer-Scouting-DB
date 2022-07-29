@@ -7,10 +7,10 @@ export default function Home(props) {
       <h1>World Soccer DB</h1>
       <div className="button-container">
         <Link to="/players">
-          <button>See All Players</button>
+          <button className="home-button">See All Players</button>
         </Link>
         <Link to="/newplayer">
-          <button>Add new player</button>
+          <button className="home-button">Add new player</button>
         </Link>
       </div>
     </div>
